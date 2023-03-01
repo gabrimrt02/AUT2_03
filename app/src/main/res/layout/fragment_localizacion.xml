@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".LocalizacionFragment"
+    android:background="@drawable/bg_gradient_4">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="#4DFFFFFF"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+
+            <TableRow>
+
+                <TextView
+                    android:layout_column="0"
+                    android:layout_span="2"
+                    android:text="@string/loc_titulo"
+                    android:textSize="25sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    />
+
+            </TableRow>
+
+            <TableRow>
+
+                <View
+                    android:layout_height="1dip"
+                    android:background="@color/black"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    />
+
+                <View
+                    android:layout_height="1dip"
+                    android:background="@color/black"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:padding="3dp"
+                    android:text="@string/loc_latitud"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/loc_latitud_label"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dp"
+                    android:text="0000"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_column="0"
+                    android:padding="3dp"
+                    android:text="@string/loc_longitud"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/loc_longitud_label"
+                    android:layout_column="1"
+                    android:padding="3dp"
+                    android:text="0000"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_column="0"
+                    android:padding="3dp"
+                    android:text="@string/loc_altitud"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/loc_altitud_label"
+                    android:layout_column="1"
+                    android:padding="3dp"
+                    android:text="0000"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_column="0"
+                    android:padding="3dp"
+                    android:text="@string/loc_rumbo"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/loc_rumbo_label"
+                    android:layout_column="1"
+                    android:padding="3dp"
+                    android:text="0000"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    />
+
+            </TableRow>
+
+            <TableRow>
+
+                <View
+                    android:layout_height="1dip"
+                    android:background="@color/black"
+                    android:layout_marginTop="15dp"
+                    />
+
+                <View
+                    android:layout_height="1dip"
+                    android:background="@color/black"
+                    android:layout_marginTop="15dp"
+                    />
+
+            </TableRow>
+
+        </TableLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

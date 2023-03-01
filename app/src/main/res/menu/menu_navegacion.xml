@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.ComponentesMaterialDesign.MainActivity">
+    <group>
+        <item android:id="@+id/menu_primera_activity"
+            android:title="@string/primera_activity" />
+        <item android:id="@+id/menu_segunda_activity"
+            android:icon="@android:drawable/ic_dialog_email"
+            android:title="@string/segunda_activity" />
+        <item android:id="@+id/menu_tercera_acivity"
+            android:title="@string/tercera_activity" />
+        <item android:id="@+id/menu_cuarta_activity"
+            android:title="@string/cuarta_activity"
+            />
+    </group>
+
+</menu>

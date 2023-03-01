@@ -1,0 +1,60 @@
+<resources>
+    <!-- GENERAL -->
+    <string name="app_name">AUT2_03</string>
+    <string name="inicio_app">Bienvenido a AUT2_03</string>
+    <string name="already_tab">Ya se encuentra en la pestaña seleccionada</string>
+    <string name="already_act">Ya se encuentra en la actividad seleccionada</string>
+
+    <!-- NAVIGATOR DRAWER -->
+    <string name="titulo_navigator">NAVEGADOR</string>
+    <string name="primera_activity">PRIMERA ACTIVITY</string>
+    <string name="segunda_activity">SEGUNDA ACTIVITY</string>
+    <string name="tercera_activity">TERCERA ACTIVITY</string>
+    <string name="cuarta_activity">CUARTA ACTIVITY</string>
+
+
+    <!-- NOMBRES TABS -->
+    <string name="tab_resolucion">Resolución</string>
+    <string name="tab_bateria">Batería</string>
+    <string name="tab_luminosidad">Luminosidad</string>
+    <string name="tab_localizacion">Localización</string>
+
+    <!-- TAB RESOLUCION -->
+    <string name="res_titulo">Resoluciones del dispositivo</string>
+    <string name="res_ancho">Ancho: </string>
+    <string name="res_alto">Alto: </string>
+    <string name="res_vertical">Vertical: </string>
+    <string name="res_apaisado">Apaisado: </string>
+
+    <!-- TAB BATERIA -->
+    <string name="bat_titulo">Información de la Batería</string>
+    <string name="bat_estado">Estado: </string>
+    <string name="bat_capacidad">Capacidad: </string>
+    <string name="bat_porcentaje">Porcentaje Restante: </string>
+
+    <!-- ESTADOS BATERÍA -->
+    <string name="cargando">Cargando</string>
+    <string name="no_carga">No cargando</string>
+    <string name="carga_ac"> (AC)</string>
+    <string name="carga_usb"> (USB)</string>
+    <string name="carga_inalambrica"> (Inálambrica)</string>
+
+    <!-- TAB LUMINOSIDAD -->
+    <string name="lum_titulo">Luminosidad del Entorno</string>
+    <string name="lum_cantidad">Cantidad de lx: </string>
+    <string name="lum_luminosidad">Luminosidad: </string>
+    <string name="lum_error">El dispositivo no cuenta con un sensor de luminosidad</string>
+
+    <!-- VALORES DE LA LUMINOSIDAD -->
+    <string name="lum_oscuro">Oscuro</string>
+    <string name="lum_normal">Normal</string>
+    <string name="lum_brillante">Brillante</string>
+
+    <!-- TAB LOCALIZACIÓN -->
+    <string name="loc_titulo">LOCALIZACIÓN DEL DISPOSITIVO</string>
+    <string name="loc_latitud">Latitud: </string>
+    <string name="loc_longitud">Longitud: </string>
+    <string name="loc_altitud">Altitud: </string>
+    <string name="loc_rumbo">Rumbo: </string>
+
+</resources>

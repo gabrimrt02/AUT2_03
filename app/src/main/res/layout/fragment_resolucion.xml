@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ResolucionFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="@drawable/bg_gradient_1">
+
+        <!-- TODO Hacer interfaz e implementar el codigo necesario para terminarla -->
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="#4DFFFFFF"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.5"
+            >
+
+            <TableRow
+
+                >
+
+                <TextView
+                    android:layout_column="0"
+                    android:layout_span="2"
+                    android:text="@string/res_titulo"
+                    android:textSize="25sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    />
+
+            </TableRow>
+
+            <TableRow>
+
+                <View
+                    android:layout_height="1dip"
+                    android:background="@color/black"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    />
+
+                <View
+                    android:layout_height="1dip"
+                    android:background="@color/black"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:padding="3dp"
+                    android:text="@string/res_alto"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/res_alto_label"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dp"
+                    android:text="0000"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_column="0"
+                    android:padding="3dp"
+                    android:text="@string/res_ancho"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/res_ancho_label"
+                    android:layout_column="1"
+                    android:padding="3dp"
+                    android:text="0000"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    />
+
+            </TableRow>
+
+            <TableRow>
+
+                <View
+                    android:layout_height="1dip"
+                    android:background="@color/black"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    />
+
+                <View
+                    android:layout_height="1dip"
+                    android:background="@color/black"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_column="0"
+                    android:padding="3dp"
+                    android:text="@string/res_vertical"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/res_vertical_label"
+                    android:layout_column="1"
+                    android:padding="3dp"
+                    android:text="0000"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_column="0"
+                    android:padding="3dp"
+                    android:text="@string/res_apaisado"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/res_apaisado_label"
+                    android:layout_column="1"
+                    android:padding="3dp"
+                    android:text="0000"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    />
+
+            </TableRow>
+
+            <TableRow>
+
+                <View
+                    android:layout_height="1dip"
+                    android:background="@color/black"
+                    android:layout_marginTop="15dp"
+                    />
+
+                <View
+                    android:layout_height="1dip"
+                    android:background="@color/black"
+                    android:layout_marginTop="15dp"
+                    />
+
+            </TableRow>
+
+        </TableLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

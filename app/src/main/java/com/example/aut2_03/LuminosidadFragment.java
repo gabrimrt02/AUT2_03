@@ -1,5 +1,6 @@
 package com.example.aut2_03;
 
+import static android.content.Context.SENSOR_SERVICE;
 import static android.hardware.Sensor.TYPE_LIGHT;
 
 import android.content.Context;
@@ -7,6 +8,7 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -32,10 +34,12 @@ public class LuminosidadFragment extends Fragment {
     private String NORMAL;
     private String BRILLANTE;
 
+    private float valormax;
+
     // Atributos del sensor
     private SensorManager sensorManager;
-    private Sensor sensor;
-    private SensorEventListener listenerSensor;
+    private Sensor lightSensor;
+    private SensorEventListener lightEventListener;
 
     // Labels
     private TextView cantidadLuxTextview;
@@ -74,32 +78,38 @@ public class LuminosidadFragment extends Fragment {
         BRILLANTE = getString(R.string.lum_brillante);
 
         // Código para recuperar los valores del sensor
-        sensorManager = (SensorManager) getContext().getSystemService(Context.SENSOR_SERVICE);
-        sensor = sensorManager.getDefaultSensor(TYPE_LIGHT);
 
-        if(sensor == null)
-            Toast.makeText(getContext(), R.string.lum_error, Toast.LENGTH_LONG).show();
-        else {
-
-            listenerSensor = new SensorEventListener() {
-                @Override
-                public void onSensorChanged(SensorEvent sensorEvent) {
-                    float valorSensor = sensorEvent.values[0];
-
-                    if (valorSensor < MINIMO)
-                        changeLabel(valorSensor, OSCURO);
-                    else if (valorSensor >= MINIMO && valorSensor <= MAXIMO)
-                        changeLabel(valorSensor, NORMAL);
-                    else
-                        changeLabel(valorSensor, BRILLANTE);
-                }
-
-                @Override
-                public void onAccuracyChanged(Sensor sensor, int i) {
-
-                }
-            };
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            sensorManager = (SensorManager) getContext().getSystemService(SENSOR_SERVICE);
         }
+        lightSensor = sensorManager.getDefaultSensor(TYPE_LIGHT);
+
+        if (lightSensor == null) {
+            Toast.makeText(getContext(), "El dispositivo no tiene sensor de luz!", Toast.LENGTH_SHORT).show();
+        }
+        valormax = lightSensor.getMaximumRange();
+
+        lightEventListener = new SensorEventListener() {
+            @Override
+            public void onSensorChanged(SensorEvent sensorEvent) {
+                double value = sensorEvent.values[0];
+
+                if(value < MINIMO){
+                    luminosidadTextView.setText("Luminosidad: " + String.valueOf(value) + " lx\nDARK");
+                }else if(value >= MINIMO && value < MAXIMO){
+                    luminosidadTextView.setText("Luminosidad: " + String.valueOf(value) + " lx\nMEDIUM");
+                }else if(value >= MAXIMO){
+                    luminosidadTextView.setText("Luminosidad: " + String.valueOf(value) + " lx\nBRIGHT");
+                }
+
+                int newValue = (int) (255f * value / valormax);
+
+            }
+
+            @Override
+            public void onAccuracyChanged(Sensor sensor, int i) {
+            }
+        };
     }
 
     private void changeLabel(float valor, String texto) {

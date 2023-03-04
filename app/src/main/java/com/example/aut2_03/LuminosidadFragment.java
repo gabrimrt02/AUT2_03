@@ -86,19 +86,20 @@ public class LuminosidadFragment extends Fragment {
 
         if (lightSensor == null) {
             Toast.makeText(getContext(), "El dispositivo no tiene sensor de luz!", Toast.LENGTH_SHORT).show();
+        } else {
+            valormax = lightSensor.getMaximumRange();
         }
-        valormax = lightSensor.getMaximumRange();
 
         lightEventListener = new SensorEventListener() {
             @Override
             public void onSensorChanged(SensorEvent sensorEvent) {
                 double value = sensorEvent.values[0];
 
-                if(value < MINIMO){
+                if (value < MINIMO) {
                     luminosidadTextView.setText("Luminosidad: " + String.valueOf(value) + " lx\nDARK");
-                }else if(value >= MINIMO && value < MAXIMO){
+                } else if (value >= MINIMO && value < MAXIMO) {
                     luminosidadTextView.setText("Luminosidad: " + String.valueOf(value) + " lx\nMEDIUM");
-                }else if(value >= MAXIMO){
+                } else if (value >= MAXIMO) {
                     luminosidadTextView.setText("Luminosidad: " + String.valueOf(value) + " lx\nBRIGHT");
                 }
 
